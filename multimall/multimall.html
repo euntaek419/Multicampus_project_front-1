@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    
     <title>멀티몰 - 1등 의류몰</title>
     <style>
    *{
@@ -36,6 +36,21 @@
 	font-size: 20px;
 	}
 	
+	.topBtn{
+	text-align: right;
+	font-size: 30px;
+	
+	}
+	
+	.navbar-light .navbar-nav .nav-link:hover{
+    color: orange;
+}
+	
+	
+	
+	
+	
+	
 	h1{
 	margin-top: 50px;
 	margin-left: 150px;
@@ -45,8 +60,14 @@
 	h4{
 	color:orange;
 	}
- 
-    </style>
+	
+	.simbol{
+	margin-left : 20px;
+	}
+    
+    	
+	</style>
+
     
     
     
@@ -62,16 +83,20 @@
 	<div class="maintop">
      <A href="http://localhost:8080/html/multimall/multimall.html"><IMG src="../images/mblack.png" width=240; height =60; ></A>
      
+     
      <div class="d-flex" > <!-- 검색 -->
         <input class="form-control me-sm-2" type="text" placeholder="오늘의 아우터" style="width:300px;height:50px;font-size:20px;">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit" style="float:right;">Search</button>
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit" style="float:right; ">Search</button>
+    <div class="simbol">
+    <A href = "#"><img src="../images/person.svg" width="50" height="50" style="float:right; margin-left : 20px;" ></A>
+    <A href = "#"><img src="../images/cart.svg" width="50" height="50" style="float:right; margin-left : 20px;"></A>
       </div>
-    </div>
+      </div>
+    </div> 
     
+       
     
-    
-    
-
+	
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   	<div class="container-fluid">
     <a class="navbar-brand" href="#"></a>
@@ -79,8 +104,9 @@
     <span class="navbar-toggler-icon"></span>
     </button>
     
+    
 
-      <ul class="navbar-nav justify-content-center" style="width:100%">
+      <ul class="navbar-nav  justify-content-center" style="width:100%">
         <li class="nav-item">
           <a class="nav-link" href="#">&nbsp;홈&nbsp;
           </a>
@@ -95,16 +121,17 @@
           <a class="nav-link" href="#">&nbsp;아우터&nbsp;</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">&nbsp;장바구니&nbsp;</a>
+          <a class="nav-link" href="order.html">&nbsp;장바구니&nbsp;</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">&nbsp;고객센터&nbsp;</a>
+          <a class="nav-link" href="cs.html">&nbsp;고객센터&nbsp;</a>
         </li>
       </ul>
       </div>
 
      
 </nav>
+
 
 
 
@@ -287,50 +314,37 @@
           <li class="mb-2">멀티캠퍼스 브라우니 감사합니다 잘 먹고 있워용</li>
         </ul>
       </div>
-      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
-        <h5>Links</h5>
-        <ul class="list-unstyled">
-          <li class="mb-2"><a href="/">Home</a></li>
-          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/">Docs</a></li>
-          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/examples/">Examples</a></li>
-          <li class="mb-2"><a href="{{ .Site.Params.themes }}">Themes</a></li>
-          <li class="mb-2"><a href="{{ .Site.Params.blog }}">Blog</a></li>
+      <div class="col-6 col-lg-4 offset-lg-1 mb-3">
+        <h3><b>고객센터</b></h3>
+        <h5><b>070-1234-5678</b></h5>
+        <br>
+        <ul class="list-unstyled text-muted">
+          <li class="mb-2"><b>영업시간</b> AM 10:00 ~ PM 17:00 (주말 및 공휴일 휴무)</li>
+          <li class="mb-2"><b>점심시간</b> PM 12:30 ~ PM 13:30 </li>
+          <li class="mb-2"><br></li>
+          <li class="mb-2"><a href="#"><button type="button" class="btn btn-dark">입점문의</button></a> <a href="#"><button type="button" class="btn btn-dark">셀러어드민</button></a></li>
+         
         </ul>
       </div>
-      <div class="col-6 col-lg-2 mb-3">
-        <h5>Guides</h5>
+      
+      <div class="col-6 col-lg-4 mb-3">
+        <h5>6조 구성</h5>
         <ul class="list-unstyled">
-          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/getting-started/">Getting started</a></li>
-          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/examples/starter-template/">Starter template</a></li>
-          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/getting-started/webpack/">Webpack</a></li>
-          <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/getting-started/parcel/">Parcel</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-lg-2 mb-3">
-        <h5>Projects</h5>
-        <ul class="list-unstyled">
-          <li class="mb-2"><a href="{{ .Site.Params.github_org }}/bootstrap">Bootstrap 5</a></li>
-          <li class="mb-2"><a href="{{ .Site.Params.github_org }}/bootstrap/tree/v4-dev">Bootstrap 4</a></li>
-          <li class="mb-2"><a href="{{ .Site.Params.github_org }}/icons">Icons</a></li>
-          <li class="mb-2"><a href="{{ .Site.Params.github_org }}/rfs">RFS</a></li>
-          <li class="mb-2"><a href="{{ .Site.Params.github_org }}/bootstrap-npm-starter">npm starter</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-lg-2 mb-3">
-        <h5>N조 구성</h5>
-        <ul class="list-unstyled">
-          <li class="mb-2">메인페이지_최은택</li>
-          <li class="mb-2">~~~~~~~</li>
-          <li class="mb-2">12312321321</li>
-          <li class="mb-2">ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ</li>
-          <li class="mb-2">!!!!!!!!!!!!!!!!!!!</li>
-          <li class="mb-2">............</li>
+          <li class="mb-2">메인 페이지_최은택</li>
+          <li class="mb-2">고객센터/장바구니/구매 페이지_김정년</li>
+          <li class="mb-2">관리자 상품 등록/관리자 고객 센터 관리_양정민</li>
+          <li class="mb-2">상품 페이지_이예은</li>
+          <li class="mb-2">로그인/회원 가입_이윤석</li>
         </ul>
       </div>
     </div>
   </div>
+<div class=topBtn onclick="window.scrollTo(0,0);" style="float: right; margin-right:100px; margin-top:70px; margin-bottom:50px; height: 3%; width: 3%;"><img src="../images/up.svg" height="200%" width="200%"><b>&nbsp;TOP</b></div>
 </footer>
     
-    
+
+
+
+
   </body>
 </html>
